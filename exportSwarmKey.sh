@@ -34,10 +34,10 @@ Install_Main() {
 	echo 'Создание приватного ключа...'
 
 
-	mkdir /root/bee-keys/
-	cp /root/.bee/keys/swarm.key /root/bee-keys/swarm.key
-	./exportSwarmKey /root/bee-keys/ $n > key_tmp.json
-	rm /root/bee-keys/swarm.key
+	mkdir /home/ubuntu/bee-keys/
+	cp /var/lib/bee/keys/swarm.key /home/ubuntu/bee-keys/swarm.key
+	./exportSwarmKey /home/ubuntu/bee-keys/ $n > key_tmp.json
+	rm /home/ubuntu/bee-keys/swarm.key
 	sed 's/^[^{]*//' key_tmp.json > key.json
 	rm key_tmp.json
 	echo 'Ваш кошелёк: '; cat key.json | jq '.address'
