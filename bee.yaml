@@ -1,3 +1,29 @@
+## Bee configuration - https://gateway.ethswarm.org/bzz/docs.swarm.eth/docs/installation/configuration/
+
+## HTTP API listen address (default ":1633")
+# api-addr: :1633
+## chain block time (default 15)
+# block-time: 15
+## initial nodes to connect to (default [/dnsaddr/bootnode.ethswarm.org])
+# bootnode: [/dnsaddr/bootnode.ethswarm.org]
+## cause the node to always accept incoming connections
+# bootnode-mode: false
+## enable clef signer
+clef-signer-enable: true
+## clef signer endpoint
+clef-signer-endpoint: /var/lib/bee-clef/clef.ipc
+## config file (default is /home/<user>/.bee.yaml)
+config: /etc/bee/bee.yaml
+## origins with CORS headers enabled
+# cors-allowed-origins: []
+## data directory (default "/home/<user>/.bee")
+data-dir: /var/lib/bee
+## cache capacity in chunks, multiply by 4096 to get approximate capacity in bytes
+# cache-capacity: 1000000
+## number of open files allowed by database
+# db-open-files-limit: 200
+## size of block cache of the database in bytes
+# db-block-cache-capacity: 33554432
 ## size of the database write buffer in bytes
 # db-write-buffer-size: 33554432
 ## disables db compactions triggered by seeks
